@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cs -h+dist/default/production\sendtopic.X.production.sym \
   --cmf=dist/default/production\sendtopic.X.production.cmf -z -Q16F883 \
-  -oC:\Users\noahh\AppData\Local\Temp\xcAsi58.0\driver_tmp_3.o \
+  -oC:\Users\noahh\AppData\Local\Temp\xcAshlc.0\driver_tmp_3.o \
   -presetVect=00h -pisrVect=04h -pcode=08h --fixupoverflow=error \
   -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
   -Mdist/default/production/sendtopic.X.production.map -E1 \
@@ -31,13 +31,13 @@ build/default/production/sendtopic.o
                 config                             2007     2007        2        0       4
                 isrVect                               4        4        1        8       0
                 resetVect                             0        0        1        0       0
-                code                                  8        8       7F       10       0
+                code                                  8        8       89       10       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 isrVect                               4        4        1         0
                 resetVect                             0        0        1         0
-                code                                  8        8       7F         0
+                code                                  8        8       89         0
 
         CLASS   STRCODE        
 
@@ -80,7 +80,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 resetVect                      000000  000001  000001         0       0  CODE        2
                 isrVect                        000004  000001  000005         8       0  CODE        2
-                code                           000008  00007F  000087        10       0  CODE        2
+                code                           000008  000089  000091        10       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -91,47 +91,46 @@ UNUSED ADDRESS RANGES
         BANK2            0120-016F             50           1
         CODE             0001-0003              3           2
                          0005-0007              3
-                         0087-0FFF            779
+                         0091-0FFF            76F
         COMMON           0070-007F             10           1
         CONST            0001-0003              3           2
                          0005-0007              3
-                         0087-0FFF            100
+                         0091-0FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0001-0003              3           2
                          0005-0007              3
-                         0087-0FFF            100
+                         0091-0FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
                          0120-016F             50
         SFR0             0002-0007              6           1
                          000A-000F              6
-        SFR2             010E-011F             12           1
         SFR3             0180-01EF             70           1
         STRCODE          0001-0003              3           2
                          0005-0007              3
-                         0087-0FFF            F79
+                         0091-0FFF            F6F
         STRING           0001-0003              3           2
                          0005-0007              3
-                         0087-0FFF            100
+                         0091-0FFF            100
 
                                   Symbol Table
 
-__H__absolute__ __absolute__ 0000  __Hcode         code         0087
-__Hconfig       config       2009  __Hdata         data         010E
-__Hedata        edata        010E  __HisrVect      isrVect      0005
-__HresetVect    resetVect    0001  __Hspace_0      (abs)        010E
+__H__absolute__ __absolute__ 0000  __Hcode         code         0091
+__Hconfig       config       2009  __Hdata         data         0122
+__Hedata        edata        0122  __HisrVect      isrVect      0005
+__HresetVect    resetVect    0001  __Hspace_0      (abs)        0122
 __Hspace_1      (abs)        0000  __Hspace_3      (abs)        0000
-__Hspace_4      (abs)        4010  __Hudata        udata        010E
-__Hudata_bank0  udata_bank0  010E  __Hudata_bank1  udata_bank1  010E
-__Hudata_bank2  udata_bank2  010E  __Hudata_shr    udata_shr    010E
+__Hspace_4      (abs)        4010  __Hudata        udata        0122
+__Hudata_bank0  udata_bank0  0122  __Hudata_bank1  udata_bank1  0122
+__Hudata_bank2  udata_bank2  0122  __Hudata_shr    udata_shr    0122
 __L__absolute__ __absolute__ 0000  __Lcode         code         0008
-__Lconfig       config       0000  __Ldata         data         010E
-__Ledata        edata        010E  __LisrVect      isrVect      0004
+__Lconfig       config       0000  __Ldata         data         0122
+__Ledata        edata        0122  __LisrVect      isrVect      0004
 __LresetVect    resetVect    0000  __Lspace_0      (abs)        0000
 __Lspace_1      (abs)        0000  __Lspace_3      (abs)        0000
-__Lspace_4      (abs)        0000  __Ludata        udata        010E
-__Ludata_bank0  udata_bank0  010E  __Ludata_bank1  udata_bank1  010E
-__Ludata_bank2  udata_bank2  010E  __Ludata_shr    udata_shr    010E
+__Lspace_4      (abs)        0000  __Ludata        udata        0122
+__Ludata_bank0  udata_bank0  0122  __Ludata_bank1  udata_bank1  0122
+__Ludata_bank2  udata_bank2  0122  __Ludata_shr    udata_shr    0122
 __S0            (abs)        0000  __S1            (abs)        0000
 __S3            (abs)        0000  
